@@ -1,0 +1,79 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="420" d:DesignHeight="280"
+        x:Class="minutnik.MainWindow"
+        Title="Minutnik"
+        Width="420"
+        Height="280"
+        MinWidth="380"
+        MinHeight="260"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="20" RowDefinitions="Auto,Auto,*,Auto" RowSpacing="16">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="24">
+            <StackPanel Spacing="4">
+                <TextBlock Text="Praca (min)" />
+                <NumericUpDown x:Name="WorkMinutesBox"
+                               Minimum="1"
+                               Maximum="180"
+                               Increment="1"
+                               Value="25"
+                               Width="150"
+                               MinWidth="150"
+                               Padding="8,4"
+                               HorizontalContentAlignment="Left"
+                               FormatString="0"
+                               ValueChanged="OnWorkMinutesChanged" />
+            </StackPanel>
+            <StackPanel Spacing="4">
+                <TextBlock Text="Przerwa (min)" />
+                <NumericUpDown x:Name="BreakMinutesBox"
+                               Minimum="1"
+                               Maximum="180"
+                               Increment="1"
+                               Value="5"
+                               Width="150"
+                               MinWidth="150"
+                               Padding="8,4"
+                               HorizontalContentAlignment="Left"
+                               FormatString="0"
+                               ValueChanged="OnBreakMinutesChanged" />
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" Spacing="4">
+            <TextBlock x:Name="PhaseText"
+                       Text="Praca"
+                       HorizontalAlignment="Center"
+                       FontSize="16" />
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="16">
+                <TextBlock x:Name="TimeText"
+                           Text="25:00"
+                           FontSize="48"
+                           FontWeight="SemiBold" />
+                <StackPanel VerticalAlignment="Center" Spacing="2">
+                    <TextBlock Text="Cykle" FontSize="12" Opacity="0.75" />
+                    <TextBlock x:Name="CyclesText"
+                               Text="0"
+                               FontSize="24"
+                               FontWeight="SemiBold" />
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    Spacing="12">
+            <Button x:Name="StartPauseButton"
+                    Content="Start"
+                    MinWidth="110"
+                    Click="OnStartPauseClick" />
+            <Button x:Name="ResetButton"
+                    Content="Reset"
+                    MinWidth="110"
+                    Click="OnResetClick" />
+        </StackPanel>
+    </Grid>
+</Window>
