@@ -110,15 +110,7 @@ wlasna reka: historia cykli
 
 Dokumentacja pomiarów i testów jest zapisywana w osobnym commicie.
 
-8. Repozytorium i publikacja
-
-Adres repozytorium GitHub: jeszcze nie utworzono.
-
-Po utworzeniu repozytorium należy wypchnąć wszystkie commity i uzupełnić tę sekcję rzeczywistym adresem URL.
-
-Po opublikowaniu projektu należy przesłać adres repozytorium w formularzu oddania zadania 3.1.
-
-9. Podsumowanie
+ Podsumowanie
 
 Projekt obejmuje minutnik pracy i przerw, licznik cykli oraz własnoręcznie dodaną historię ukończonych cykli. W README zapisano wyniki pomiaru tokenów pierwszej wiadomości w języku polskim i angielskim, limity modelu dostępnego w Cursorze oraz wyniki testów separatora dziesiętnego.
 
