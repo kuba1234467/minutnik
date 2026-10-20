@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("minutnik")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e912b3109361d469088e095fd8091c4fb829e8d6")]
 [assembly: System.Reflection.AssemblyProductAttribute("minutnik")]
 [assembly: System.Reflection.AssemblyTitleAttribute("minutnik")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

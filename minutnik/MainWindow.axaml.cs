@@ -2,11 +2,14 @@ using System;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Threading;
+using System;
+using System.Collections.Generic;
 
 namespace minutnik;
 
 public partial class MainWindow : Window
 {
+    private readonly List<string> _history = new();
     private readonly DispatcherTimer _timer;
     private int _remainingSeconds;
     private bool _isRunning;
@@ -111,6 +114,8 @@ public partial class MainWindow : Window
             else
             {
                 _completedCycles++;
+                 _history.Add($"{DateTime.Now:HH:mm} — cykl {_completedCycles}");
+    HistoryList.ItemsSource = _history.ToArray();
                 _isBreak = false;
                 _remainingSeconds = GetWorkSeconds();
                 PauseTimer();

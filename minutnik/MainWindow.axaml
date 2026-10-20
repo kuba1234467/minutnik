@@ -58,6 +58,8 @@
                                Text="0"
                                FontSize="24"
                                FontWeight="SemiBold" />
+                               <ListBox Name="HistoryList" />
+
                 </StackPanel>
             </StackPanel>
         </StackPanel>
