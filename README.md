@@ -114,3 +114,26 @@ Dokumentacja pomiarów i testów jest zapisywana w osobnym commicie.
 
 Projekt obejmuje minutnik pracy i przerw, licznik cykli oraz własnoręcznie dodaną historię ukończonych cykli. W README zapisano wyniki pomiaru tokenów pierwszej wiadomości w języku polskim i angielskim, limity modelu dostępnego w Cursorze oraz wyniki testów separatora dziesiętnego.
 
+ ## Rozbiór promptu z pokazu
+
+ Poniżej zapisano odtworzony rozbiór treści promptu budującego minutnik. Linie są oznaczane według tego, czy opisują wynik, sposób wykonania albo warunek zakończenia.
+
+ - **CO** — zbuduj aplikację minutnika pracy i przerw.
+ - **JAK** — zbuduj ją w C# z biblioteką Avalonia.
+ - **JAK** — umieść całą logikę w pliku `MainWindow.axaml.cs`.
+ - **CO** — ustaw domyślnie 25 minut pracy i 5 minut przerwy.
+ - **CO** — pozwól zmieniać oba czasy w oknie.
+ - **CO** — dodaj jeden przycisk Start/Pauza i osobny przycisk Reset.
+ - **CO** — pokaż widoczny licznik ukończonych cykli.
+ - **CO** — po zakończeniu pracy rozpocznij przerwę automatycznie.
+ - **CO** — pokazuj czas w formacie `mm:ss`.
+ - **JAK** — użyj polskiego interfejsu i angielskich nazw w kodzie.
+ - **JAK** — nie korzystaj z dodatkowych bibliotek.
+ - **PO CZYM** — zadanie jest skończone, kiedy polecenie `dotnet build` przechodzi bez błędów.
+
+ Liczy: **co ma powstać — 8**, **jak ma zostać zbudowane — 4**, **po czym poznać ukończenie — 1**. Najmniej jest zdań o tym, po czym poznać ukończenie.
+
+ ## Decyzja o liczniku cykli przy resecie w środku przerwy
+
+ Naciśnięcie Reset w czasie przerwy sprawia, że `_isBreak` zostaje ustawione na `false`, licznik `_completedCycles` wraca do zera, a licznik czasu przechodzi na aktualnie ustawiony czas pracy. To decyzja modelu, ponieważ żadna z siedmiu zasad nie określała tego przypadku.
+

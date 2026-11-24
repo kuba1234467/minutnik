@@ -1,0 +1,1 @@
+Z pięciu zdań „Kiedy …, to …” dało się sprawdzić od razu przez uruchomienie programu: wszystkie pięć, ponieważ interfejs i bieżący czas, fazę, cykle oraz obsługę Start/Pauza i Reset widać w działającym oknie.

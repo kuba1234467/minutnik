@@ -35,3 +35,9 @@
 - Co dokładnie oznacza jeden ukończony cykl i czy praca liczy się po zakończeniu przerwy.
 - Czy zmiana ustawionego czasu ma być możliwa podczas odmierzania.
 - Jak zresetować limit ustawionego czasu poza 1–180 minutami.
+
+## Porównanie po lekturze siedmiu zasad
+
+Z pamięci udało się odtworzyć wszystkie siedem zasad: domyślny czas pracy i przerwy, jeden przycisk Start/Pauza oraz osobny Reset, widoczny licznik cykli, automatyczne rozpoczęcie przerwy, format mm:ss oraz polski interfejs z angielskimi nazwami w kodzie i brak dodatkowych bibliotek.
+
+Program ma też zachowania, których żadna z siedmiu zasad nie określała. Reset zeruje licznik cykli i wraca do fazy pracy z aktualnym czasem pracy. Zmiana czasu aktualizuje bieżący fazę tylko wtedy, gdy nie jest przerwą; podczas przerwy zmiana czasu przerwy ustawia pozostały czas; lista historii zapisuje godzinę i numer cyklu; a przy zmianie czasu wartości są ograniczone do 1–180 minut i zaokrąglane.
